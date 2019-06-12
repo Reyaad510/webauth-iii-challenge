@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.16.0/libexec/bin/yarn.js add knex-file
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.16.0/libexec/bin/yarn.js add knex:
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -14,17 +14,17 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/knex-file: Not found
-      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:66091:18)
-      at Request.self.callback (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:129590:22)
-      at Request.emit (events.js:182:13)
-      at Request.<anonymous> (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:130562:10)
-      at Request.emit (events.js:182:13)
-      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:130484:12)
-      at Object.onceWrapper (events.js:273:13)
-      at IncomingMessage.emit (events.js:187:15)
-      at endReadableNT (_stream_readable.js:1094:12)
-      at process._tickCallback (internal/process/next_tick.js:63:19)
+  Error: Invalid URL
+      at module.exports.module.exports (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:70867:9)
+      at urlParts (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:31528:75)
+      at NpmRegistry.isRequestToRegistry (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:31567:19)
+      at NpmRegistry.<anonymous> (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:31599:31)
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:322:14
+      at new Promise (<anonymous>)
+      at new F (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:5228:28)
+      at NpmRegistry.<anonymous> (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:301:12)
 
 npm manifest: 
   {
@@ -44,6 +44,7 @@ npm manifest:
       "dotenv": "^8.0.0",
       "express": "^4.17.1",
       "helmet": "^3.18.0",
+      "init": "^0.1.2",
       "jsonwebtoken": "^8.5.1",
       "knex": "^0.17.5",
       "sqlite3": "^4.0.8"
@@ -549,6 +550,11 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/crypto-random-string/-/crypto-random-string-1.0.0.tgz#a230f64f568310e1498009940790ec99545bca7e"
     integrity sha1-ojD2T1aDEOFJgAmUB5DsmVRbyn4=
+  
+  daemon@>=0.3.0:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/daemon/-/daemon-1.1.0.tgz#6c5102c81db0be856fc9008fc2c935b398864ae8"
+    integrity sha1-bFECyB2wvoVvyQCPwsk1s5iGSug=
   
   dashdash@^1.12.0:
     version "1.14.1"
@@ -1257,6 +1263,13 @@ Lockfile:
     version "1.3.5"
     resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
     integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
+  
+  init@^0.1.2:
+    version "0.1.2"
+    resolved "https://registry.yarnpkg.com/init/-/init-0.1.2.tgz#9882ac152707bccba7fe2207c8df8050875c1504"
+    integrity sha1-mIKsFScHvMun/iIHyN+AUIdcFQQ=
+    dependencies:
+      daemon ">=0.3.0"
   
   interpret@^1.2.0:
     version "1.2.0"
