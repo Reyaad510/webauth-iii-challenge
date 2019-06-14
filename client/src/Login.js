@@ -26,12 +26,14 @@ class Login extends React.Component {
             //   password: this.state.password
           });
           console.log(result);
+          console.log(result.data.authToken)
          
-          localStorage.setItem('token', result.data.token);
+          localStorage.setItem('token', result.data.authToken);
           this.props.history.push('/users')
         } catch(err) {
             console.log(err)
         }
+        
     }
 
     handleChange = ev => {

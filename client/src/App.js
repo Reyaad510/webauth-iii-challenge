@@ -7,6 +7,10 @@ import Users from './Users';
 
 class App extends React.Component {
 
+  logout = () => {
+    localStorage.removeItem('token');
+    this.props.history.push('/login')
+  }
 
 
   render() {
@@ -19,7 +23,7 @@ class App extends React.Component {
         <li><NavLink to='/login'>Login</NavLink></li>
         <li><NavLink to='/signup'>Signup</NavLink></li>
         <li><NavLink to='/users'>Users</NavLink></li>
-        <li><button>Logout</button></li>
+        <li><button onClick={this.logout}>Logout</button></li>
       </ul>
 
       <div>
